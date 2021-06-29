@@ -84,7 +84,8 @@ jigglypuffDot3.addEventListener('click', handleJigglypuffDot3);
 jigglypuffDot4.addEventListener('click', handleJigglypuffDot4);
 jigglypuffDot5.addEventListener('click', handleJigglypuffDot5);
 
-setInterval(handleSetInterval, '3000');
+let timer = setInterval(handleSetInterval, '3000');
+
 let currentScreen = 'pikachu';
 function handleSetInterval() {
   if (currentScreen === 'pikachu') {
@@ -125,6 +126,8 @@ function handleSetInterval() {
   }
 }
 function handlepikachuLeftAngle() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'jigglypuff';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -133,6 +136,8 @@ function handlepikachuLeftAngle() {
   jigglypuffDiv.classList.remove('hidden');
 };
 function handlepikachuRightAngle() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'bulbasaur';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.remove('hidden');
@@ -141,6 +146,8 @@ function handlepikachuRightAngle() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handlePikachuDot1() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'pikachu';
   pikachuDiv.classList.remove('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -149,6 +156,8 @@ function handlePikachuDot1() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handlePikachuDot2() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'bulbasaur';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.remove('hidden');
@@ -157,6 +166,8 @@ function handlePikachuDot2() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handlePikachuDot3() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'charmander';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -165,6 +176,8 @@ function handlePikachuDot3() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handlePikachuDot4() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'squirtle';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -173,6 +186,8 @@ function handlePikachuDot4() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handlePikachuDot5() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'jigglypuff';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -182,6 +197,8 @@ function handlePikachuDot5() {
 };
 
 function handleBulbasaurLeftAngle() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'pikachu';
   pikachuDiv.classList.remove('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -190,6 +207,8 @@ function handleBulbasaurLeftAngle() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleBulbasaurRightAngle() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'charmander';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -198,6 +217,8 @@ function handleBulbasaurRightAngle() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleBulbasaurDot1() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'pikachu';
   pikachuDiv.classList.remove('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -206,6 +227,8 @@ function handleBulbasaurDot1() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleBulbasaurDot2() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'bulbasaur';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.remove('hidden');
@@ -214,6 +237,8 @@ function handleBulbasaurDot2() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleBulbasaurDot3() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'charmander';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -222,6 +247,8 @@ function handleBulbasaurDot3() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleBulbasaurDot4() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'squirtle';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -230,6 +257,8 @@ function handleBulbasaurDot4() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleBulbasaurDot5() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'jigglypuff';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -239,6 +268,8 @@ function handleBulbasaurDot5() {
 };
 
 function handleCharmanderLeftAngle() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'bulbasaur';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.remove('hidden');
@@ -247,6 +278,8 @@ function handleCharmanderLeftAngle() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleCharmanderRightAngle() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'squirtle';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -255,6 +288,8 @@ function handleCharmanderRightAngle() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleCharmanderDot1() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'pikachu';
   pikachuDiv.classList.remove('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -263,6 +298,8 @@ function handleCharmanderDot1() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleCharmanderDot2() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'bulbasaur';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.remove('hidden');
@@ -271,6 +308,8 @@ function handleCharmanderDot2() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleCharmanderDot3() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'charmander';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -279,6 +318,8 @@ function handleCharmanderDot3() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleCharmanderDot4() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'squirtle';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -287,6 +328,8 @@ function handleCharmanderDot4() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleCharmanderDot5() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'jigglypuff';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -296,6 +339,8 @@ function handleCharmanderDot5() {
 };
 
 function handleSquirtleLeftAngle() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'charmander';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -304,6 +349,8 @@ function handleSquirtleLeftAngle() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleSquirtleRightAngle() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'jigglypuff';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -312,6 +359,8 @@ function handleSquirtleRightAngle() {
   jigglypuffDiv.classList.remove('hidden');
 };
 function handleSquirtleDot1() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'pikachu';
   pikachuDiv.classList.remove('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -320,6 +369,8 @@ function handleSquirtleDot1() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleSquirtleDot2() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'bulbasaur';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.remove('hidden');
@@ -328,6 +379,8 @@ function handleSquirtleDot2() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleSquirtleDot3() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'charmander';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -336,6 +389,8 @@ function handleSquirtleDot3() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleSquirtleDot4() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'squirtle';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -344,6 +399,8 @@ function handleSquirtleDot4() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleSquirtleDot5() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'jigglypuff';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -353,6 +410,8 @@ function handleSquirtleDot5() {
 };
 
 function handleJigglypuffLeftAngle() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'squirtle';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -361,6 +420,8 @@ function handleJigglypuffLeftAngle() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleJigglypuffRightAngle() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'pikachu';
   pikachuDiv.classList.remove('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -369,6 +430,8 @@ function handleJigglypuffRightAngle() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleJigglypuffDot1() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'pikachu';
   pikachuDiv.classList.remove('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -377,6 +440,8 @@ function handleJigglypuffDot1() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleJigglypuffDot2() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'bulbasaur';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.remove('hidden');
@@ -385,6 +450,8 @@ function handleJigglypuffDot2() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleJigglypuffDot3() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'charmander';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -393,6 +460,8 @@ function handleJigglypuffDot3() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleJigglypuffDot4() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'squirtle';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
@@ -401,6 +470,8 @@ function handleJigglypuffDot4() {
   jigglypuffDiv.classList.add('hidden');
 };
 function handleJigglypuffDot5() {
+  clearInterval(timer);
+  timer = setInterval(handleSetInterval, '3000');
   currentScreen = 'jigglypuff';
   pikachuDiv.classList.add('hidden');
   bulbasaurDiv.classList.add('hidden');
