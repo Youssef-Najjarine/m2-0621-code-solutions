@@ -1,13 +1,8 @@
-.pikachuAndArrows,
-.bulbasaurAndArrows,
-.charmanderAndArrows,
-.squirtleAndArrows,
-.jigglypuffAndArrows {
+.arrowsAndImage {
   display: flex;
   justify-content: space-around;
-
-
 }
+
 .hidden {
   display: none;
 }
@@ -17,56 +12,21 @@ img {
     width: 700px;
 }
 
-.pikachuDot1,
-.pikachuDot2,
-.pikachuDot3,
-.pikachuDot4,
-.pikachuDot5,
-.bulbasaurDot1,
-.bulbasaurDot2,
-.bulbasaurDot3,
-.bulbasaurDot4,
-.bulbasaurDot5,
-.charmanderDot1,
-.charmanderDot2,
-.charmanderDot3,
-.charmanderDot4,
-.charmanderDot5,
-.squirtleDot1,
-.squirtleDot2,
-.squirtleDot3,
-.squirtleDot4,
-.squirtleDot5,
-.jigglypuffDot1,
-.jigglypuffDot2,
-.jigglypuffDot3,
-.jigglypuffDot4,
-.jigglypuffDot5 {
+.dotsDiv button {
   margin: 100px 10px 0 10px;
   font-size: 50px;
   background-color: white;
   border: none;
   cursor: pointer;
 }
-.pikachuDots,
-.bulbasaurDots,
-.charmanderDots,
-.squirtleDots,
-.jigglypuffDots {
+
+.dotsDiv {
   text-align: center;
 }
 
 
-.pikachuLeftAngle,
-.pikachuRightAngle,
-.bulbasaurLeftAngle,
-.bulbasaurRightAngle,
-.charmanderLeftAngle,
-.charmanderRightAngle,
-.squirtleLeftAngle,
-.squirtleRightAngle,
-.jigglypuffLeftAngle,
-.jigglypuffRightAngle {
+.leftAngle,
+.rightAngle {
 font-size: 100px;
   background-color: white;
   border: none;
