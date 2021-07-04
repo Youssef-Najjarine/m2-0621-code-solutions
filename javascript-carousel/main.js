@@ -1,121 +1,114 @@
-const pikachuSection = document.querySelector('.pikachu');
-const bulbasaurSection = document.querySelector('.bulbasaur');
-const charmanderSection = document.querySelector('.charmander');
-const squirtleSection = document.querySelector('.squirtle');
-const jigglypuffSection = document.querySelector('.jigglypuff');
+const img = document.querySelector('img');
+const section = document.querySelector('section');
+const pikachuDot = document.querySelector('.dotsDiv button:nth-of-type(1)');
+const bulbasaurDot = document.querySelector('.dotsDiv button:nth-of-type(2)');
+const charmanderDot = document.querySelector('.dotsDiv button:nth-of-type(3)');
+const squirtleDot = document.querySelector('.dotsDiv button:nth-of-type(4)');
+const jigglypuffDot = document.querySelector('.dotsDiv button:nth-of-type(5)');
 
 document.addEventListener('click', handleButtons);
-let timer = setInterval(handleSetInterval, '3000');
-
+let timer = setInterval(handleSetInterval, 3000);
 
 function handleButtons(event) {
   clearInterval(timer);
-  timer = setInterval(handleSetInterval, '3000');
-  currentScreen = event.target.closest('section').className;
-  currentClass = event.target.className;
+  timer = setInterval(handleSetInterval, 3000);
+
+  let currentClass = event.target.className;
   if (currentClass === 'fas fa-angle-left leftAngle') {
-    revealPreviousSection();
+    displayPreviousSection();
   } else if (currentClass === 'fas fa-angle-right rightAngle') {
-    revealNextSection();
+    displayNextSection();
   }
   handleDots();
 }
 
+function displayPreviousSection() {
+  if (section.className === 'pikachu') {
+    displayJigglypuff();
+  } else if (section.className === 'jigglypuff') {
+    displaySquirtle();
+  } else if (section.className === 'squirtle') {
+    displayCharmander();
+  } else if (section.className === 'charmander') {
+    displayBulbasaur();
+  } else if (section.className === 'bulbasaur') {
+    displayPikachu();
+  }
+}
+  function displayNextSection() {
+    if (section.className === 'pikachu') {
+      displayBulbasaur();
+    } else if (section.className === 'bulbasaur') {
+      displayCharmander();
+    } else if (section.className === 'charmander') {
+     displaySquirtle();
+    } else if (section.className === 'squirtle') {
+      displayJigglypuff();
+    } else if (section.className === 'jigglypuff') {
+      displayPikachu();
+    }
+  }
 
-function revealPreviousSection() {
-  if (currentScreen === 'pikachu') {
-    revealJigglypuffSection();
-  } else if (currentScreen === 'bulbasaur') {
-    revealPikachuSection();
-  } else if (currentScreen === 'charmander') {
-    revealBulbasaurSection();
-  } else if (currentScreen === 'squirtle') {
-    revealCharmanderSection();
-  } else if (currentScreen === 'jigglypuff') {
-    revealSquirtleSection();
+  function handleDots() {
+    let dot = event.target;
+       if (dot === pikachuDot) {
+    displayPikachu();
+  } else if (dot === bulbasaurDot) {
+    displayBulbasaur();
+  } else if (dot === charmanderDot) {
+    displayCharmander();
+  } else if (dot === squirtleDot) {
+    displaySquirtle();
+  } else if (dot === jigglypuffDot) {
+    displayJigglypuff();
   }
-}
-function revealNextSection() {
-  if (currentScreen === 'pikachu') {
-    revealBulbasaurSection();
-  } else if (currentScreen === 'bulbasaur') {
-    revealCharmanderSection();
-  } else if (currentScreen === 'charmander') {
-    revealSquirtleSection();
-  } else if (currentScreen === 'squirtle') {
-  revealJigglypuffSection();
-  } else if (currentScreen === 'jigglypuff') {
-    revealPikachuSection();
   }
-}
-function handleDots() {
-  if (currentClass === 'fas fa-circle pikachuDot' || currentClass === 'far fa-circle pikachuDot') {
-    revealPikachuSection();
-  } else if (currentClass === 'fas fa-circle bulbasaurDot' || currentClass === 'far fa-circle bulbasaurDot') {
-    revealBulbasaurSection();
-  } else if (currentClass === 'fas fa-circle charmanderDot' || currentClass === 'far fa-circle charmanderDot') {
-    revealCharmanderSection();
-  } else if (currentClass === 'fas fa-circle squirtleDot' || currentClass === 'far fa-circle squirtleDot') {
-    revealSquirtleSection();
-  } else if (currentClass === 'fas fa-circle jigglypuffDot' || currentClass === 'far fa-circle jigglypuffDot') {
-    revealJigglypuffSection()
+ function handleSetInterval() {
+    displayNextSection();
   }
-}
-function handleSetInterval() {
-  if (currentScreen === 'pikachu') {
-    currentScreen = 'bulbasaur';
-    revealBulbasaurSection();
-  } else if (currentScreen === 'bulbasaur') {
-    currentScreen = 'charmander';
-    revealCharmanderSection();
-  } else if (currentScreen === 'charmander') {
-    currentScreen = 'squirtle';
-    revealSquirtleSection();
-  } else if (currentScreen === 'squirtle') {
-    currentScreen = 'jigglypuff';
-    revealJigglypuffSection();
-  } else if (currentScreen === 'jigglypuff') {
-    currentScreen = 'pikachu';
-    revealPikachuSection();
+
+  function displayPikachu() {
+    section.className = 'pikachu';
+    img.src = 'images/1.png';
+    pikachuDot.className = 'fas fa-circle';
+    bulbasaurDot.className = 'far fa-circle';
+    charmanderDot.className = 'far fa-circle';
+    squirtleDot.className = 'far fa-circle';
+    jigglypuffDot.className = 'far fa-circle';
   }
+function displayBulbasaur() {
+  section.className = 'bulbasaur';
+  img.src = 'images/2.png';
+  pikachuDot.className = 'far fa-circle';
+  bulbasaurDot.className = 'fas fa-circle';
+  charmanderDot.className = 'far fa-circle';
+  squirtleDot.className = 'far fa-circle';
+  jigglypuffDot.className = 'far fa-circle';
 }
-function revealPikachuSection() {
-  currentScreen = 'pikachu';
-  pikachuSection.classList.remove('hidden');
-  bulbasaurSection.classList.add('hidden');
-  charmanderSection.classList.add('hidden');
-  squirtleSection.classList.add('hidden');
-  jigglypuffSection.classList.add('hidden');
+function displayCharmander() {
+  section.className = 'charmander';
+  img.src = 'images/3.png';
+  pikachuDot.className = 'far fa-circle';
+  bulbasaurDot.className = 'far fa-circle';
+  charmanderDot.className = 'fas fa-circle';
+  squirtleDot.className = 'far fa-circle';
+  jigglypuffDot.className = 'far fa-circle';
 }
-function revealBulbasaurSection() {
-  currentScreen = 'bulbasaur';
-  bulbasaurSection.classList.remove('hidden');
-  pikachuSection.classList.add('hidden');
-  charmanderSection.classList.add('hidden');
-  squirtleSection.classList.add('hidden');
-  jigglypuffSection.classList.add('hidden');
+function displaySquirtle() {
+  section.className = 'squirtle';
+  img.src = 'images/4.png';
+  pikachuDot.className = 'far fa-circle';
+  bulbasaurDot.className = 'far fa-circle';
+  charmanderDot.className = 'far fa-circle';
+  squirtleDot.className = 'fas fa-circle';
+  jigglypuffDot.className = 'far fa-circle';
 }
-function revealCharmanderSection() {
-  currentScreen = 'charmander';
-  charmanderSection.classList.remove('hidden');
-  pikachuSection.classList.add('hidden');
-  bulbasaurSection.classList.add('hidden');
-  squirtleSection.classList.add('hidden');
-  jigglypuffSection.classList.add('hidden');
-}
-function revealSquirtleSection() {
-  currentScreen = 'squirtle';
-  squirtleSection.classList.remove('hidden');
-  pikachuSection.classList.add('hidden');
-  bulbasaurSection.classList.add('hidden');
-  charmanderSection.classList.add('hidden');
-  jigglypuffSection.classList.add('hidden');
-}
-function revealJigglypuffSection() {
-  currentScreen = 'jigglypuff';
-  jigglypuffSection.classList.remove('hidden');
-  pikachuSection.classList.add('hidden');
-  bulbasaurSection.classList.add('hidden');
-  charmanderSection.classList.add('hidden');
-  squirtleSection.classList.add('hidden');
+function displayJigglypuff() {
+  section.className = 'jigglypuff';
+  img.src = 'images/5.png';
+  pikachuDot.className = 'far fa-circle';
+  bulbasaurDot.className = 'far fa-circle';
+  charmanderDot.className = 'far fa-circle';
+  squirtleDot.className = 'far fa-circle';
+  jigglypuffDot.className = 'fas fa-circle';
 }
