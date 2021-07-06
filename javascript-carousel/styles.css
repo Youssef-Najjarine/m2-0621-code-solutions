@@ -1,0 +1,33 @@
+.arrowsAndImage {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hidden {
+  display: none;
+}
+
+
+img {
+    width: 700px;
+}
+
+.dotsDiv button {
+  margin: 100px 10px 0 10px;
+  font-size: 50px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.dotsDiv {
+  text-align: center;
+}
+
+.leftAngle,
+.rightAngle {
+font-size: 100px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
