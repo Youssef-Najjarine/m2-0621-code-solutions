@@ -1,0 +1,527 @@
+    1  git config ...
+    2  git config --global --list
+    3  git config --global user.name "Youssef Najjarine"
+    4  git config --global user.email "youssefnajjarine@hotmail.com"
+    5  git config --global --list
+    6  git clone https://github.com/youssefnajjarine/m2-0621-code-solutions.git
+    7  cd ~/ repos
+    8  cd ~/repos/m2-0621-code-solutions
+    9  cd ~/m2-0621-code-solutions/
+   10  pwd
+   11  git status
+   12  git switch master
+   13  git pull origin master
+   14  git branch javascript-custom-methods
+   15  git branch --list
+   16  git switch javascript-custom-methods 
+   17  git status
+   18  git switch master
+   19  mv ~/m2-0621-code-solutions/ ~/repos/
+   20  mv ~/m2-0621-code-solutions ~/repos/
+   21  git switch ~/repos
+   22  git switch ~/repos/m2-0621-code-solutions/
+   23  cd ~/repos/
+   24  cd m2-0621-code-solutions/
+   25  git switch javascript-custom-methods 
+   26  git status
+   27  git add javascript-custom-methods/
+   28  git status
+   29  git commit -m "Completed javascript-custom-methods."
+   30  git push origin javascript-custom-methods 
+   31  git switch master
+   32  git remote set-url origin <ssh_clone_address>cd ~/repos/
+   33  git remote set-url origin git@github.com:youssefnajjarine/m2-0621-code-solutions.git
+   34  git switch javascript-custom-methods 
+   35  git status
+   36  git add javascript-custom-methods/
+   37  git commit -m "Completed javascript-custom-methods"
+   38  git push origin javascript-custom-methods 
+   39  git switch master
+   40  git pull origin master
+   41  git branch javascript-this
+   42  git switch javascript-this 
+   43  git status
+   44  git javascript-this/
+   45  git commit "Completed javascript-this."
+   46  git commit -m "Completed javascript-this."
+   47  git status
+   48  git add javascript-this/
+   49  git commit -m "Completed javascript-this."
+   50  git status
+   51  git push origin javascript-this 
+   52  git switch master
+   53  git pull origin master
+   54  git branch javascript-prototypes
+   55  git switch javascript-prototypes 
+   56  git switch master
+   57  git branch javascript-constructors
+   58  git switch javascript-constructors 
+   59  git switch javascript-prototypes 
+   60  git add javascript-prototypes/
+   61  git commit -m "Completed javascript-prototypes"
+   62  git push origin javascript-prototypes 
+   63  git switch javascript-constructors 
+   64  cd ~/repos
+   65  cd m2-0621-code-solutions/
+   66  git add javascript-constructors/
+   67  git commit -m "Completed javascript-constructors."
+   68  git status
+   69  git push origin javascript-constructors 
+   70  git switch master
+   71  git branch javascript-bank
+   72  git switch javascript-bank 
+   73  cd ~/repos
+   74  cd m2-0621-code-solutions/
+   75  cd ~/repos
+   76  cd m2-0621-code-solutions/
+   77  git switch master
+   78  git branch javascript-timers
+   79  git switch javascript-timers 
+   80  git add javascript-timers/
+   81  git commit -m "Completed javascript-timers."
+   82  git push origin javascript-timers 
+   83  git switch master
+   84  git branch javascript-carousel
+   85  git switch javascript-carousel 
+   86  git switch javascript-bank 
+   87  git switch javascript-carousel 
+   88  git switch javascript-bank 
+   89  git switch javascript-carousel 
+   90  git switch javascript-bank 
+   91  git switch javascript-carousel 
+   92  git add javascript-carousel/
+   93  git commit -m "Completed javascript-carousel"
+   94  git push origin javascript-carousel 
+   95  git switch javascript-bank 
+   96  git swiitch javascript-timers
+   97  git switch javascript-timers 
+   98  git add javascript-timers/
+   99  git commit -m "Made changes you requested."
+  100  git push origin javascript-timers 
+  101  git add javascript-timers
+  102  git commit -m "Removed all console.logs"
+  103  git push origin javascript-timers 
+  104  git switch javascript-bank 
+  105  cd ~/repos
+  106  git clone https://github.com/<you>/driving-game
+  107  git clone https://github.com/youssefnajjarine/driving-game
+  108  cd driving-game/
+  109  git branch user-can-see-their-car
+  110  git switch user-can-see-their-car 
+  111  cd ~/repos
+  112  cd m2-0621-code-solutions/
+  113  git add javascript-bank/
+  114  git commit -m "Completed javascript-bank."
+  115  git push origin javascript-bank 
+  116  git switch master
+  117  git pull origin master
+  118  git switch javascript-carousel 
+  119  git add javascript-carousel/
+  120  git commit -m "Added a reset to timer when any button is pressed."
+  121  git push origin javascript-carousel 
+  122  cd ~/repos
+  123  cd driving-game/
+  124  git status
+  125  git add index.html 
+  126  git add main.js 
+  127  git add styles.css 
+  128  git commit -m "Completed user-can-see-their-car."
+  129  git push origin user-can-see-their-car 
+  130  cd ~/repos
+  131  cd driving-game/
+  132  git switch master
+  133  git remote set -url git@github.com:youssefnajjarine/driving-game.git
+  134  git remote set git@github.com:youssefnajjarine/driving-game.git
+  135  git remote set-url git@github.com:youssefnajjarine/driving-game.git
+  136  git switch user-can-see-their-car 
+  137  git add index.html 
+  138  git add styles.css 
+  139  git add main.js 
+  140  git commit -m "Completed user-can-see-their-car."
+  141  git push origin user-can-see-their-car 
+  142  cd ~/repos
+  143  cd m2-0621-code-solutions/
+  144  cd ~/repos
+  145  cd driving-game/
+  146  git switch master
+  147  git remote set-url origin git@github.com:youssefnajjarine/driving-game.git
+  148  git switch user-can-see-their-car 
+  149  git add styles.css 
+  150  git add index.html 
+  151  git add main.js 
+  152  git commit -m "Completed user-can-see-their-car."
+  153  git push origin user-can-see-their-car 
+  154  git switch master
+  155  git pull origin master
+  156  git branch user-can-turn-their-car
+  157  git switch user-can-turn-their-car 
+  158  git status
+  159  git add index.html 
+  160  git add styles.css 
+  161  git add main.js 
+  162  git commit -m "Completed user-can-turn-their-car."
+  163  git push origin user-can-turn-their-car 
+  164  git switch master
+  165  git pull origin master
+  166  git branch user-can-start-their-car
+  167  git switch user-can-start-their-car 
+  168  git status
+  169  git add index.html 
+  170  git add data.js 
+  171  git add main.js 
+  172  git add styles.css 
+  173  git status
+  174  git add main.js 
+  175  git commit -m "Completed user-can-start-their-car."
+  176  git push origin user-can-start-their-car 
+  177  git switch master
+  178  git pull origin master
+  179  git branch user-can-stop-their-car
+  180  git switch user-can-stop-their-car 
+  181  cd ~/repos
+  182  cd driving-game/
+  183  git status
+  184  git add data.js 
+  185  git add index.html 
+  186  git add main.js 
+  187  git add styles.css 
+  188  git commit -m "Completed user-can-stop-their-car."
+  189  git push origin user-can-stop-their-car 
+  190  git switch master
+  191  git pull origin master
+  192  git branch user-can-steer-their-car
+  193  git switch user-can-steer-their-car 
+  194  git status
+  195  git add main.js 
+  196  git commit -m "Completed user-can-steer-their-car."
+  197  git push origin user-can-steer-their-car 
+  198  git add main.js 
+  199  git commit -m "Small adjustments."
+  200  git switch master
+  201  git branch user-can-interact-with-obsticles
+  202  git switch user-can-interact-with-obsticles 
+  203  git switch master
+  204  git pull origin master
+  205  git switch user-can-interact-with-obsticles 
+  206  cd ~/repos
+  207  cd m2-0621-code-solutions/
+  208  cd ~/repos
+  209  cd driving-game/
+  210  cd ~/repos
+  211  cd m2-0621-code-solutions/
+  212  cd ~/repos
+  213  cd driving-game/
+  214  cd ~/repos
+  215  cd m2-0621-code-solutions/
+  216  git add javascript-carousel/
+  217  git commit -m "Re-did all of the code so it isn't repetitive."
+  218  git push origin javascript-carousel 
+  219  cd ~/repos
+  220  cd driving-game/
+  221  cd ~/repos
+  222  cd m2-0621-code-solutions/
+  223  cd ~/repos
+  224  cd m2-0621-code-solutions/
+  225  git add javascript-carousel/
+  226  git commit -m "Reduced carousel down to only one"
+  227  git push origin javascript-carousel 
+  228  cd ~/repos
+  229  cd driving-game/
+  230  cd ~/repos
+  231  cd m2-0621-code-solutions/
+  232  git switch master
+  233  git pull origin master
+  234  git branch http-messages
+  235  git switch http-messages 
+  236  cd http-messages
+  237  http http://www.example.com
+  238  cd http-messages
+  239  http http://www.example.com
+  240  cd ~/repos
+  241  cd m2-0621-code-solutions/
+  242  cd http-messages
+  243  http http://www.example.com
+  244  http http://learning-fuze.github.io/example/
+  245  http https://learning-fuze.github.io/example/
+  246  http --verbose https://learning-fuze.github.io/example/
+  247  http --body GET https://jsonplaceholder.typicode.com/users > users.json
+  248  http --body GET https://learning-fuze.github.io/example/
+  249  http --body GET https://learning-fuze.github.io/example/ > index.html
+  250  git status
+  251  git add http-messages
+  252  cd ~/repos
+  253  cd m2-0621-code-solutions/
+  254  hit status
+  255  git add http-messages/
+  256  git commit -m "Completed http-messages."
+  257  git push origin http-messages 
+  258  git switch master
+  259  git pull origin master
+  260  git branch javascript-ajax
+  261  git switch javascript-ajax 
+  262  git add javascript-ajax/
+  263  git commit -m "Completed javascript-ajax."
+  264  git push origin javascript-ajax 
+  265  cd ~/repos
+  266  git clone git@github.com:youssefnajjarine/ajax-project.git
+  267  cd ajax-project/
+  268  npm ci
+  269  git branch issue-1-user-can-choose-to-play-an-anime-trivia-game
+  270  git switch issue-1-user-can-choose-to-play-an-anime-trivia-game 
+  271  cd ~/repos
+  272  cd ajax-project/
+  273  git status
+  274  git add images/Ajax\ logo.jpg 
+  275  git add images/heart.png 
+  276  git add images/homeIcon.webp 
+  277  git add css/layout.css 
+  278  git add css/styles.css 
+  279  git add index.html 
+  280  git add js/main.js 
+  281  git commit -m "Completed issue 1: user-can-choose-to-play-an-anime-trivia-game."
+  282  git push origin issue-1-user-can-choose-to-play-an-anime-trivia-game 
+  283  git status
+  284  git add js/main.js 
+  285  git commit -m "Completed issue 1: user-can-choose-to-play-an-anime-trivia-game."
+  286  git push origin issue-1-user-can-choose-to-play-an-anime-trivia-game 
+  287  git switch master
+  288  git pull origin master
+  289  git branch issue-2-user-can-submit-an-answer
+  290  git switch issue-2-user-can-submit-an-answer 
+  291  git status
+  292  git add css/layout.css 
+  293  git add css/styles.css 
+  294  git add index.html 
+  295  git add js/data.js 
+  296  git add js/main.js 
+  297  git commit -m "Completed issue-2-user-can-submit-an-answer."
+  298  git status
+  299  git add css/styles.css 
+  300  git add js/data.js 
+  301  git commit -m "Completed issue-2-user-can-submit-an-answer."
+  302  git push origin issue-2-user-can-submit-an-answer 
+  303  git status
+  304  git add js/main.js 
+  305  git commit -m "added console.log."
+  306  git status
+  307  git add js/main.js 
+  308  git commit -m "removed console.log."
+  309  git push origin issue-2-user-can-submit-an-answer 
+  310  git status
+  311  git add css/styles.css 
+  312  git add index.html 
+  313  git add js/main.js 
+  314  git commit -m "Got rid of second modal, so only one remains now."
+  315  git push origin issue-2-user-can-submit-an-answer 
+  316  git switch master
+  317  git pull origin master
+  318  git branch issue-3-user-can-favorite-an-anime-quote/anime
+  319  git switch issue-3-user-can-favorite-an-anime-quote/anime 
+  320  git status
+  321  git add css/styles.css 
+  322  git add index.html 
+  323  git add js/main.js 
+  324  git commit -m "Completed issue-3-user-can-favorite-an-anime-quote/anime."
+  325  git status
+  326  git add css/styles.css 
+  327  git commit -m "Completed issue-3-user-can-favorite-an-anime-quote/anime."
+  328  git push origin issue-3-user-can-favorite-an-anime-quote/anime 
+  329  git switch master
+  330  git pull origin master
+  331  git branch issue-4-optional-user-can-choose-the-rate/review-at-home-screen
+  332  git switch issue-4-optional-user-can-choose-the-rate/review-at-home-screen 
+  333  git status
+  334  git add css/styles.css 
+  335  git add index.html 
+  336  git add js/main.js 
+  337  git commit -m "Completed issue-4-optional-user-can-choose-the-rate/review-at-home-screen."
+  338  git push origin issue-4-optional-user-can-choose-the-rate/review-at-home-screen 
+  339  cd ~/repos
+  340  cd driving-game/
+  341  cd ~/repos
+  342  cd ajax-project/
+  343  git switch master
+  344  git pull origin master
+  345  git branch issue-5-optional-user-can-give-each-anime-a-rating-out-of-5-stars
+  346  git switch issue-5-optional-user-can-give-each-anime-a-rating-out-of-5-stars 
+  347  git status
+  348  git add css/styles.css 
+  349  git add index.html 
+  350  git add js/main.js 
+  351  git commit -m "Completed issue-5-optional-user-can-give-each-anime-a-rating-out-of-5-stars."
+  352  git status
+  353  git add js/main.js 
+  354  git commit -m "Completed issue-5-optional-can-give-each-anime-a-rating-out-of-5-stars."
+  355  git push origin issue-5-optional-user-can-give-each-anime-a-rating-out-of-5-stars 
+  356  git switch master
+  357  git pull origin master
+  358  git branch issue-6-optional-user-can-write-their-own-review-for-each-anime
+  359  git switch issue-6-optional-user-can-write-their-own-review-for-each-anime 
+  360  cd ~/repos
+  361  cd ajax-project/
+  362  git status
+  363  git add css/styles.css 
+  364  git add index.html 
+  365  git add js/main.js 
+  366  git status
+  367  git add js/main.js 
+  368  git commit -m "Completed issue-6-optional-user-can-write-their-own-review-for-each-anime."
+  369  git status
+  370  git add css/styles.css 
+  371  git commit -m "completed issue-6-optional-user-can-write-their-own-review-for-each-anime."
+  372  git push origin issue-6-optional-user-can-write-their-own-review-for-each-anime 
+  373  git status
+  374  git add index.html
+  375  git commit -m "Got rid of random li element."
+  376  git push origin master issue-6-optional-user-can-write-their-own-review-for-each-anime 
+  377  git status
+  378  git add index.html 
+  379  git commit -m "got rid of random li element."
+  380  git push origin issue-6-optional-user-can-write-their-own-review-for-each-anime 
+  381  cd ~/repos
+  382  cd driving-game/
+  383  git status
+  384  git add data.js 
+  385  git add index.html 
+  386  git add main.js 
+  387  git add styles.css 
+  388  git commit -m "Added moving obsticles."
+  389  git push origin user-can-interact-with-obsticles 
+  390  git status
+  391  git add index.html 
+  392  git commit -m "Added moving obsticles."
+  393  cd ~/repos
+  394  cd dri
+  395  cd driving-game/
+  396  git switch master
+  397  git pull origin master
+  398  git branch user-can-crash-into-obsticles
+  399  git switch user-can-crash-into-obsticles 
+  400  cd ~/repos
+  401  cd driving-game/
+  402  cd ~/repos
+  403  cd m2-0621-code-solutions/
+  404  git switch master
+  405  git pull origin master
+  406  git branch es6-const-let
+  407  git switch es6-const-let 
+  408  git status
+  409  git add es6-const-let/
+  410  git commit -m "Completed es6-const-let."
+  411  git push origin master es6-const-let 
+  412  git switch master
+  413  git branch es6-template-literals
+  414  git switch es6-template-literals 
+  415  git status
+  416  git add es6-template-literals/
+  417  git commit -m "Completed es6-template-literals."
+  418  git push origin es6-template-literals 
+  419  git switch master
+  420  git pull origin master
+  421  git branch es6-destructuring
+  422  git switch es6-destructuring 
+  423  git switch es6-template-literals 
+  424  git status
+  425  git add es6-template-literals/git commit -m "Replaced all concatenations with template literals."
+  426  git status
+  427  git add es6-template-literals/
+  428  git commit -m "Replaced all concatenations with template literals."
+  429  git push origin es6-template-literals 
+  430  git switch es6-destructuring 
+  431  git switch es6-template-literals 
+  432  git status
+  433  git add es6-template-literals/
+  434  git commit -m "Removed space inbetween template literal."
+  435  git push origin es6-template-literals 
+  436  git switch es6-destructuring 
+  437  git switch es6-template-literals 
+  438  git status
+  439  git add es6-template-literals/
+  440  git commit -m "Removed space inbetween template literal."
+  441  git push origin es6-template-literals 
+  442  git switch master 
+  443  git pull origin master
+  444  git switch es6-destructuring 
+  445  git status
+  446  git add es6-destructuring/
+  447  git commit -m "Completed es6-destructuring"
+  448  git push origin es6-destructuring 
+  449  git switch master
+  450  git branch es6-arrow-functions
+  451  git switch es6-arrow-functions 
+  452  git status
+  453  git add es6-arrow-functions/
+  454  git commit -m "Completed es6-arrow-functions."
+  455  git push origin master
+  456  git push origin master es6-arrow-functions 
+  457  git status
+  458  git add es6-arrow-functions/
+  459  git commit -m "Completed es6-arrow-functions."
+  460  git push origin es6-arrow-functions 
+  461  git switch master
+  462  git branch command-line-basics
+  463  git switch command-line-basics 
+  464  pwd
+  465  man man
+  466  man cat
+  467  cat laziness.txt
+  468  man cat laziness.txt
+  469  man cat
+  470  cat - laziness.txt
+  471  cd ~/repos
+  472  cd m2-0621-code-solutions/
+  473  man cat
+  474  cat impatience.txt
+  475  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  476  cd command-line-basics/
+  477  cat impatience.txt 
+  478  cat laziness.txt 
+  479  cat hubris.txt 
+  480  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  481  cat three-virtues.txt 
+  482  man ls
+  483  ls
+  484  -a
+  485  ls -a
+  486  ls -F
+  487  ls lfz-staff/
+  488  ls -a lfz-staff/
+  489  ls -F lfz-staff/
+  490  ls -aF lfz-staff/ > lfz-staff/contents.txt
+  491  cat lfz-staff/contents.txt
+  492  pwd
+  493  man pwd
+  494  pwd
+  495  pwd > i-was-here.txt
+  496  man echo
+  497  echo 'Hello, world!'
+  498  echo 'Hello, World!' > hello.txt
+  499  ls
+  500  cat hello.txt 
+  501  man touch
+  502  touch tag-youre-it.txt
+  503  touch snoot/boop.txt
+  504  ls snoot/
+  505  man mkdir
+  506  mkdir parent
+  507  ls parent/
+  508  mkdir -p parent/child/grandchild
+  509  touch parent/child/grandchild/.gitkeep
+  510  ls -a
+  511  man mv
+  512  mv pokiemans/pokemon
+  513  mv pokiemans/ pokemon
+  514  ls
+  515  man rm
+  516  rm lol.txt 
+  517  ls
+  518  rm -r kill-me/
+  519  ls
+  520  man cp
+  521  cp and-then.txt no-and-then.txt
+  522  ls
+  523  cat and-then.txt 
+  524  cat no-and-then.txt 
+  525  man history
+  526  history
+  527  history > command-history.text
