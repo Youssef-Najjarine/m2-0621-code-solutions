@@ -26,6 +26,7 @@ const jokester = {
   appendJokePhrase: ($phrase) => {
     $jokeContainer.append($phrase);
   }
+
 };
 
 const flash = {
