@@ -30,11 +30,12 @@ const jokester = {
 
 const flash = {
   laughingUrl: 'images/flash-laugh.gif',
-  laugh: () => {
-    setTimeout((laughingUrl) => {
-      this.laughingUrl = laughingUrl;
+  laugh: function() {
+
+    setTimeout(() => {
       this.laughingUrl = flash.laughingUrl;
-      $flashImage.setAttribute('src', this.laughingUrl);
+      console.log(this.laughingUrl);
+     $flashImage.setAttribute('src', this.laughingUrl);
     }, 3000);
   }
 };
