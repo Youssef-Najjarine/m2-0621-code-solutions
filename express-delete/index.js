@@ -29,7 +29,7 @@ for (const property in grades) {
 app.get('/api/grades', function (req, res) {
   res.json(answer);
 });
-app.all('/api/grades/:id', function (req, res) {
+app.delete('/api/grades/:id', function (req, res) {
   let id = req.params.id;
   answer.splice(id - 1, 1);
   res.sendStatus(204);
