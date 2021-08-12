@@ -21,19 +21,24 @@ let grades = {
   }
 }
 // :3000/api/grades/:id
-var answer = [];
+var gradesArray = [];
 for (const property in grades) {
-  answer.push(grades[property]);
+  gradesArray.push(grades[property]);
 }
 
 app.get('/api/grades', function (req, res) {
-  res.json(answer);
+  res.json(gradesArray);
 });
+
 app.delete('/api/grades/:id', function (req, res) {
-  let id = req.params.id;
-  answer.splice(id - 1, 1);
+  for (let i = 0; i < gradesArray.length; i++) {
+    if (Number(req.params.id) === gradesArray[i].id) {
+      gradesArray.splice(i, 1);
+    }
+  }
+
   res.sendStatus(204);
 });
 app.listen(3000, () => {
-  // console.log('Listening on port 3000!');
+  console.log('Listening on port 3000!');
 });
