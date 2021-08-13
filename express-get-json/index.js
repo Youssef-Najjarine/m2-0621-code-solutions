@@ -1,4 +1,3 @@
-const { json } = require('express');
 const express = require('express');
 const app = express();
 var nextId = 1;
