@@ -18,7 +18,6 @@ app.post('/api/grades', function (req, res) {
   nextId++;
   res.statusCode = 201;
   res.send(req.body);
-
 })
 
 app.listen(3000, () => {
