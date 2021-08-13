@@ -5,15 +5,12 @@ var grades = {};
 
 app.use(express.json());
 app.get('/api/grades', function (req, res) {
-
   let gradesArray = [];
   for (const property in grades) {
     gradesArray.push(grades[property]);
   }
   res.json(gradesArray);
 })
-
-
 app.post('/api/grades', function (req, res) {
   req.body.id = nextId;
   nextId++;
@@ -21,8 +18,6 @@ app.post('/api/grades', function (req, res) {
   res.send(req.body);
 
 })
-
-
 app.listen(3000, () => {
   console.log('Listening on port 3000!');
 });
