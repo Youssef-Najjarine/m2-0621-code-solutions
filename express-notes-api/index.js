@@ -18,7 +18,7 @@ app.get('/api/notes/:id', function (req, res) {
   let outcome = {};
   outcome.error = `Cannot find note with id ${id}`;
   let statusCode = 404;
-  if (id < 0) {
+  if (id <= 0 || Number.isNaN(id) || !Number.isInteger(id)) {
     statusCode = 400;
     outcome.error = 'id must be a positive integer.';
   } else {
@@ -51,14 +51,14 @@ app.post('/api/notes', function (req, res) {
         error2.error = 'An unexpected error occurred.';
         return res.status(500).send(error2);
       }
+      return res.status(201).send(req.body);
     });
-    return res.status(201).send(req.body);
   }
 });
 
 app.delete('/api/notes/:id', function (req, res) {
   const id = Number(req.params.id);
-  if (id < 0) {
+  if (id <= 0 || Number.isNaN(id) || !Number.isInteger(id)) {
     const error1 = {};
     error1.error = 'id must be a positive integer.';
     return res.status(400).send(error1);
@@ -74,8 +74,8 @@ app.delete('/api/notes/:id', function (req, res) {
         error2.error = 'An unexpected error occurred.';
         return res.status(500).send(error2);
       }
+      return res.sendStatus(204);
     });
-    res.sendStatus(204);
   }
 });
 
