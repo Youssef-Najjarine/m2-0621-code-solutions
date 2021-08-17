@@ -81,7 +81,7 @@ app.delete('/api/notes/:id', function (req, res) {
 
 app.put('/api/notes/:id', function (req, res) {
   const id = Number(req.params.id);
-  if (id < 0) {
+  if (id <= 0 || Number.isNaN(id) || !Number.isInteger(id)) {
     const error1 = {};
     error1.error = 'id must be a positive integer.';
     return res.status(400).send(error1);
@@ -101,8 +101,8 @@ app.put('/api/notes/:id', function (req, res) {
         error2.error = 'An unexpected error occurred.';
         return res.status(500).send(error2);
       }
+      return res.status(200).send(data.notes[id]);
     });
-    return res.status(200).send(data.notes[id]);
   }
 });
 
