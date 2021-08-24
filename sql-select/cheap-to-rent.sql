@@ -1,5 +1,5 @@
 select "filmId",
         "title"
   from "films"
-  order by "rentalRate" asc
+  where "rentalRate" < 1
   limit 50;
