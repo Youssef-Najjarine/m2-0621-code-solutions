@@ -30,21 +30,22 @@ app.post('/api/grades', function (req, res) {
   if (req.body.name === undefined || req.body.course === undefined || req.body.score === undefined || Number(req.body.score) < 0 || Number(req.body.score) > 100) {
     return res.status(400).send({ error: 'name and course is a required field that is equal to a valid value.Score is a required field that is equal to an integer from 0 to 100' });
   }
-  const sql = `insert into "grades" ("name","course","score")
-                values ('${req.body.name}','${req.body.course}','${req.body.score}')
-                returning *`;
-
-  db.query(sql, (err, res2) => {
+  const text = `INSERT INTO grades(name,course,score)
+                VALUES($1, $2, $3)
+                RETURNING *`;
+  const values = [req.body.name, req.body.course, req.body.score];
+  db.query(text, values, (err, res2) => {
     if (err) {
       return res.status(500).send({ error: 'database querying failed.' });
     } else {
-      return res.status(201).send(res2.rows);
+      return res.status(201).send(res2.rows[0]);
     }
   });
 });
 
 app.put('/api/grades/:gradeId', function (req, res) {
   const id = Number(req.params.gradeId);
+  var foundGradeId = false;
   if (id <= 0 || Number.isNaN(id) || !Number.isInteger(id)) {
     return res.status(400).send({ error: 'gradeId must be a positive integer.' });
   } else if (req.body.name === undefined || req.body.course === undefined || req.body.score === undefined || Number(req.body.score) < 0 || Number(req.body.score) > 100 || Number.isNaN(Number(req.body.score))) {
@@ -60,28 +61,36 @@ app.put('/api/grades/:gradeId', function (req, res) {
     if (err) {
       return res.status(500).send({ error: 'database querying failed.' });
     } else {
-      if (res3.rows[id] === undefined) {
+      for (let i = 0; i < res3.rows.length; i++) {
+        if (res3.rows[i].gradeId === id) {
+          foundGradeId = true;
+          const text = `UPDATE grades
+                        SET name=$1,
+                            course=$2,
+                            score=$3
+                        where "gradeId"=$4
+                        RETURNING *`;
+          const values = [req.body.name, req.body.course, req.body.score, id];
+
+          db.query(text, values, (err, res2) => {
+            if (err) {
+              return res.status(500).send({ error: 'database querying failed.' });
+            } else {
+              return res.status(200).send(res2.rows[0]);
+            }
+          });
+          break;
+        }
+      }
+      if (foundGradeId === false) {
         return res.status(404).send({ error: 'the gradeId entered does not exist.' });
-      } else {
-        const sqlUpdate = `update "grades"
-                set "name" = '${req.body.name}',
-                    "course" = '${req.body.course}',
-                    "score" = '${req.body.score}'
-                where "gradeId" = ${id}
-                returning *`;
-        db.query(sqlUpdate, (err, res2) => {
-          if (err) {
-            return res.status(500).send({ error: 'database querying failed.' });
-          } else {
-            return res.status(200).send(res2.rows);
-          }
-        });
       }
     }
   });
 });
 
 app.delete('/api/grades/:gradeId', function (req, res) {
+  var foundGradeId = false;
   const id = Number(req.params.gradeId);
   if (id <= 0 || Number.isNaN(id) || !Number.isInteger(id)) {
     return res.status(400).send({ error: 'gradeId must be a positive integer.' });
@@ -96,19 +105,25 @@ app.delete('/api/grades/:gradeId', function (req, res) {
     if (err) {
       return res.status(500).send({ error: 'database querying failed.' });
     } else {
-      if (res3.rows[id] === undefined) {
+      for (let i = 0; i < res3.rows.length; i++) {
+        if (res3.rows[i].gradeId === id) {
+          foundGradeId = true;
+          const text = `DELETE FROM "grades"
+                      where "gradeId"=$1
+                      RETURNING *`;
+          const values = [id];
+          db.query(text, values, (err, res2) => {
+            if (err) {
+              return res.status(500).send({ error: 'database querying failed.' });
+            } else {
+              return res.sendStatus(204);
+            }
+          });
+          break;
+        }
+      }
+      if (foundGradeId === false) {
         return res.status(404).send({ error: 'the gradeId entered does not exist.' });
-      } else {
-        const sqlDelete = `delete from "grades"
-                where "gradeId" = ${id}
-                returning *`;
-        db.query(sqlDelete, (err, res2) => {
-          if (err) {
-            return res.status(500).send({ error: 'database querying failed.' });
-          } else {
-            return res.sendStatus(204);
-          }
-        });
       }
     }
   });
